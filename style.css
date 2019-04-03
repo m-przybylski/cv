@@ -1,0 +1,15 @@
+:root {
+  --color: #d81b60;
+  --accent: #a00037;
+  --text: #ffffff;
+}
+header {
+  display: block;
+  height: 200px;
+  background: var(--color);
+  color: var(--text);
+}
+
+section {
+  border: 1px solid var(--accent)
+}
