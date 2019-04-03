@@ -1,15 +1,159 @@
 :root {
-  --color: #d81b60;
-  --accent: #a00037;
+  --primary: #3849aa;
+  --accent: #ff5c8d;
   --text: #ffffff;
+  --gray: #eeeeee;
+  --spacing: 16px;
+  --spacing-negative: -16px;
+  --half-spacing: 8px;
+  --left-width: 275px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 }
-header {
-  display: block;
-  height: 200px;
-  background: var(--color);
-  color: var(--text);
+
+body {
+  padding: var(--spacing);
+  background-color: var(--gray);
 }
 
 section {
-  border: 1px solid var(--accent)
+  padding: var(--spacing);
+  background: var(--primary);
+  color: var(--text);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+.image {
+  width: 100%;
+  background: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('img/Profile.jpg');
+  background-position: center;
+}
+.image-personal-data {
+  display: flex;
+  flex-direction: row;
+}
+.personal-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0 0 var(--half-spacing);
+  flex: 1 0 300px;
+}
+.contact {
+  display: none;
+}
+
+.left-panel, .right-panel {
+  margin: var(--spacing);
+}
+
+.right-panel {
+  flex: 1 0 0;
+}
+.image img {
+  display: none;
+}
+.personal-info .name {
+  display: inline-block;
+  font-size: 2em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  margin: 0 0 4px 0;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience header,
+.personal-details header,
+.skills header,
+.education header,
+.about-me header {
+  font-size: 2em;
+  font-weight: 900;
+  border-bottom: 1px solid var(--gray);
+  margin: 0 var(--spacing-negative) var(--spacing) var(--spacing-negative);
+  padding: 0 var(--spacing) var(--spacing);
+}
+
+li {
+  margin: var(--half-spacing) 0;
+  display: flex;
+}
+h3 {
+  color: var(--accent);
+  font-weight: 900;
+  font-size: 1.25em;
+}
+h4 {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.icon {
+  width: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 var(--half-spacing) 0 0;
+}
+.skills-table {
+  display: flex;
+}
+.skills-table__column:first-child {
+  margin-right: 50px;
+}
+
+.about-me {
+  box-sizing: border-box;
+  min-height: 377px;
+}
+
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .personal-data {
+    display: none;
+  }
+
+  .contact {
+    display: flex;
+  }
+
+  .left-panel {
+    flex: 0 0 var(--left-width);
+  }
+  
+  
+}
+
+@media print {
+  .image img {
+    display: block;
+    width: auto;
+    height: var(--left-width);
+    margin: 0 auto;
+  }
 }
