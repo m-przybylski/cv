@@ -39,23 +39,22 @@ p {
 }
 
 .image {
-  width: 100%;
+  min-height: var(--left-width);
   background: transparent;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url('img/Profile.jpg');
   background-position: center;
+  margin: var(--spacing);
 }
 .image-personal-data {
   display: flex;
-  flex-direction: row;
 }
 .personal-data {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 0 0 var(--half-spacing);
-  flex: 1 0 300px;
+  min-width: 300px;
 }
 .contact {
   display: none;
@@ -65,9 +64,10 @@ p {
   margin: var(--spacing);
 }
 
-.right-panel {
-  flex: 1 0 0;
+.personal-data section + section {
+  margin-top: var(--spacing);
 }
+
 .image img {
   display: none;
 }
@@ -129,23 +129,32 @@ h4 {
   min-height: 377px;
 }
 
+@media (min-width: 480px) {
+  .image-personal-data {
+    display: flex;
+    flex-direction: row;
+  }
+  .image {
+    width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .row {
     flex-direction: row;
   }
-
   .personal-data {
     display: none;
   }
-
   .contact {
     display: flex;
   }
-
   .left-panel {
     flex: 0 0 var(--left-width);
   }
-  
+  .right-panel {
+    flex: 1 0 0;
+  }  
   
 }
 
