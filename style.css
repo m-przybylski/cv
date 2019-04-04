@@ -13,7 +13,7 @@
 
 body {
   padding: var(--spacing);
-  background-color: var(--gray);
+  background: var(--gray);
 }
 
 section {
@@ -107,7 +107,13 @@ h3 {
 h4 {
   color: var(--accent);
   font-weight: 600;
+  font-size: 1.2em;
+  line-height: 1.75em;
+}
+h5 {
+  font-weight: 500;
   font-size: 1.1em;
+  line-height: 1.5em;
 }
 
 .icon {
@@ -127,6 +133,14 @@ h4 {
 .about-me {
   box-sizing: border-box;
   min-height: 377px;
+}
+
+.GDPR {
+  font-size: 0.75em;
+  background: var(--primary);
+  color: var(--text);
+  margin: var(--spacing);
+  padding: var(--spacing);
 }
 
 @media (min-width: 480px) {
