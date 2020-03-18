@@ -116,6 +116,10 @@ h5 {
   line-height: 1.5em;
 }
 
+a {
+  color: white;
+}
+
 .icon {
   width: 16px;
   display: flex;
