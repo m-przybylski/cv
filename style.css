@@ -45,7 +45,7 @@ p {
   background-repeat: no-repeat;
   background-image: url('img/Profile.jpg');
   background-position: center;
-  margin: var(--spacing);
+  margin: 0 0 var(--spacing);
 }
 .image-personal-data {
   display: flex;
@@ -150,6 +150,7 @@ h5 {
   }
   .image {
     width: 100%;
+    margin: 0 var(--spacing) 0 0;
   }
 }
 
@@ -168,7 +169,12 @@ h5 {
   }
   .right-panel {
     flex: 1 0 0;
-  }  
+  }
+  .image {
+    width: 100%;
+    margin: 0;
+  }
+
   
 }
 
