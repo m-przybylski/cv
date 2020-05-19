@@ -95,6 +95,10 @@ p {
   padding: 0 var(--spacing) var(--spacing);
 }
 
+.sub-list {
+  margin: 0 0 0 var(--half-spacing);
+}
+
 li {
   margin: var(--half-spacing) 0;
   display: flex;
@@ -113,6 +117,11 @@ h4 {
 h5 {
   font-weight: 500;
   font-size: 1.1em;
+  line-height: 1.5em;
+}
+h6 {
+  font-weight: 600;
+  font-size: 1em;
   line-height: 1.5em;
 }
 
