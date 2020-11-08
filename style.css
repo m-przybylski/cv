@@ -35,7 +35,7 @@ section {
 
 p {
   text-align: justify;
-  line-height: 1.5em;
+  line-height: 1.5rem;
 }
 
 .image {
@@ -73,8 +73,8 @@ p {
 }
 .personal-info .name {
   display: inline-block;
-  font-size: 2em;
-  line-height: 1.5em;
+  font-size: 2rem;
+  line-height: 1.5rem;
   text-transform: uppercase;
   margin: 0 0 4px 0;
 }
@@ -88,7 +88,7 @@ p {
 .skills header,
 .education header,
 .about-me header {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 900;
   border-bottom: 1px solid var(--gray);
   margin: 0 var(--spacing-negative) var(--spacing) var(--spacing-negative);
@@ -106,23 +106,23 @@ li {
 h3 {
   color: var(--accent);
   font-weight: 900;
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 h4 {
   color: var(--accent);
   font-weight: 600;
-  font-size: 1.2em;
-  line-height: 1.75em;
+  font-size: 1.2rem;
+  line-height: 1.75rem;
 }
 h5 {
   font-weight: 500;
-  font-size: 1.1em;
-  line-height: 1.5em;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
 }
 h6 {
   font-weight: 600;
-  font-size: 1em;
-  line-height: 1.5em;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 a {
@@ -149,7 +149,7 @@ a {
 }
 
 .GDPR {
-  font-size: 0.75em;
+  font-size: 0.75rem;
   background: var(--primary);
   color: var(--text);
   margin: var(--spacing);
@@ -192,10 +192,28 @@ a {
 }
 
 @media print {
+  :root {
+    --text: black;
+  }
   .image img {
     display: block;
     width: auto;
     height: var(--left-width);
     margin: 0 auto;
+  }
+  @page {
+    size: A4;
+    padding-top: 10mm;
+    padding-bottom: 10mm;
+  }
+
+  html, body {
+    font-size: 8px;
+    background: #FFF;
+    overflow: hidden;
+  }
+
+  .break-page {
+    page-break-after: always;
   }
 }
